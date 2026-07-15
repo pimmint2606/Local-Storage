@@ -1,0 +1,163 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef4ff;
+    display:flex;
+    justify-content:center;
+    padding:40px;
+}
+
+.container{
+    width:700px;
+}
+
+h1{
+    text-align:center;
+    color:#2c3e50;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    margin:10px 0 25px;
+}
+
+.card,
+.result-card,
+.history{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.1);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input,
+select{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#4a90e2;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:25px;
+}
+
+button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    color:white;
+    font-size:15px;
+    transition:.3s;
+}
+
+#calculateBtn{
+    background:#3498db;
+}
+
+#calculateBtn:hover{
+    background:#2980b9;
+}
+
+#saveBtn{
+    background:#2ecc71;
+}
+
+#saveBtn:hover{
+    background:#27ae60;
+}
+
+#clearBtn{
+    background:#e74c3c;
+}
+
+#clearBtn:hover{
+    background:#c0392b;
+}
+
+.result-row{
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+    font-size:17px;
+}
+
+.advice{
+    margin-top:20px;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+/* สีของคำแนะนำ */
+.easy{
+    background:#d4edda;
+    color:#155724;
+}
+
+.medium{
+    background:#fff3cd;
+    color:#856404;
+}
+
+.hard{
+    background:#f8d7da;
+    color:#721c24;
+}
+
+.history h2{
+    margin-bottom:15px;
+}
+
+#historyList{
+    list-style:none;
+}
+
+#historyList li{
+    background:#f5f5f5;
+    margin:10px 0;
+    padding:12px;
+    border-radius:8px;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+}

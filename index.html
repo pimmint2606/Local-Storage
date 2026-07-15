@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner & Exam Goal Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📚 Study Planner & Exam Goal Tracker</h1>
+    <p class="subtitle">
+        Plan your study and calculate the score you need to reach your target grade.
+    </p>
+
+    <div class="card">
+
+        <label>Subject</label>
+        <input type="text" id="subject" placeholder="e.g. Biology">
+
+        <label>Total Chapters</label>
+        <input type="number" id="chapters" min="1">
+
+        <label>Total Study Hours</label>
+        <input type="number" id="hours" min="1">
+
+        <label>Current Score</label>
+        <input type="number" id="currentScore" min="0">
+
+        <label>Final Exam Full Score</label>
+        <input type="number" id="finalFull" min="1">
+
+        <label>Target Grade</label>
+        <select id="grade">
+            <option value="80">A</option>
+            <option value="75">B+</option>
+            <option value="70">B</option>
+            <option value="65">C+</option>
+            <option value="60">C</option>
+            <option value="55">D+</option>
+            <option value="50">D</option>
+        </select>
+
+        <div class="buttons">
+            <button id="calculateBtn">Calculate</button>
+            <button id="saveBtn">Save</button>
+            <button id="clearBtn">Clear Data</button>
+        </div>
+
+    </div>
+
+    <div class="result-card">
+
+        <h2>📊 Result</h2>
+
+        <div class="result-row">
+            <span>Reading Speed</span>
+            <strong id="speed">-</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Study Plan</span>
+            <strong id="perDay">-</strong>
+        </div>
+
+        <div class="result-row">
+            <span>Required Final Score</span>
+            <strong id="needScore">-</strong>
+        </div>
+
+        <div id="advice" class="advice">
+            Waiting for calculation...
+        </div>
+
+    </div>
+
+    <div class="history">
+
+        <h2>💾 Saved Plans</h2>
+
+        <ul id="historyList">
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
