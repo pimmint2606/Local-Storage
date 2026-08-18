@@ -23,6 +23,10 @@
         <label>Total Chapters</label>
         <input type="number" id="chapters" min="1">
 
+        <!-- ช่องกรอก Chapters Studied -->
+        <label>Chapters Studied</label>
+        <input type="number" id="studied" min="0" placeholder="e.g. 3">
+
         <label>Total Study Hours</label>
         <input type="number" id="hours" min="1">
 
@@ -51,6 +55,7 @@
 
     </div>
 
+    <!-- กรอบที่ 1: Result -->
     <div class="result-card">
 
         <h2>📊 Result</h2>
@@ -76,6 +81,20 @@
 
     </div>
 
+    <!-- กรอบที่ 2: Study Progress (แยกกรอบต่างหากตามโจทย์) -->
+    <div class="progress-card">
+        <h2>📈 Study Progress</h2>
+        
+        <div class="progress-info">
+            <span id="progressText">0 / 0 Chapters Studied</span>
+            <strong id="progressPercent">0%</strong>
+        </div>
+
+        <div class="progress-bar-background">
+            <div id="progressBarFill" class="progress-bar-fill"></div>
+        </div>
+    </div>
+
     <div class="history">
 
         <h2>💾 Saved Plans</h2>
@@ -87,7 +106,7 @@
 
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
