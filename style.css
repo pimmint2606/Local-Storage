@@ -29,6 +29,7 @@ h1{
 
 .card,
 .result-card,
+.progress-card,
 .history{
     background:white;
     padding:25px;
@@ -76,29 +77,14 @@ button{
     transition:.3s;
 }
 
-#calculateBtn{
-    background:#3498db;
-}
+#calculateBtn{ background:#3498db; }
+#calculateBtn:hover{ background:#2980b9; }
 
-#calculateBtn:hover{
-    background:#2980b9;
-}
+#saveBtn{ background:#2ecc71; }
+#saveBtn:hover{ background:#27ae60; }
 
-#saveBtn{
-    background:#2ecc71;
-}
-
-#saveBtn:hover{
-    background:#27ae60;
-}
-
-#clearBtn{
-    background:#e74c3c;
-}
-
-#clearBtn:hover{
-    background:#c0392b;
-}
+#clearBtn{ background:#e74c3c; }
+#clearBtn:hover{ background:#c0392b; }
 
 .result-row{
     display:flex;
@@ -115,20 +101,35 @@ button{
     font-weight:bold;
 }
 
-/* สีของคำแนะนำ */
-.easy{
-    background:#d4edda;
-    color:#155724;
+.easy{ background:#d4edda; color:#155724; }
+.medium{ background:#fff3cd; color:#856404; }
+.hard{ background:#f8d7da; color:#721c24; }
+
+.progress-card h2{
+    margin-bottom: 15px;
 }
 
-.medium{
-    background:#fff3cd;
-    color:#856404;
+.progress-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
-.hard{
-    background:#f8d7da;
-    color:#721c24;
+.progress-bar-background{
+    width: 100%;
+    height: 22px;
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.progress-bar-fill{
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 12px;
+    transition: width 0.5s ease-in-out;
 }
 
 .history h2{
@@ -147,17 +148,7 @@ button{
 }
 
 @media(max-width:768px){
-
-    body{
-        padding:20px;
-    }
-
-    .container{
-        width:100%;
-    }
-
-    .buttons{
-        flex-direction:column;
-    }
-
+    body{ padding:20px; }
+    .container{ width:100%; }
+    .buttons{ flex-direction:column; }
 }
